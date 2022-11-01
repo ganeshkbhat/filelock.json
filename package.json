@@ -1,0 +1,23 @@
+{
+  "name": "filelock.json",
+  "version": "0.0.1",
+  "description": "APIs and Functions to work with filelock.json for npm package : require-urls",
+  "main": "index.js",
+  "exports": {
+    "require": "./index.js",
+    "import": "./index.mjs"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --recursive"
+  },
+  "author": "Ganesh B",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganeshkbhat/filelock.json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ganeshkbhat/filelock.json/issues"
+  },
+  "homepage": "https://github.com/ganeshkbhat/filelock.json#readme",
+  "license": "MIT"
+}
