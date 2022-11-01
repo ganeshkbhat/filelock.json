@@ -21,6 +21,15 @@
   "homepage": "https://github.com/ganeshkbhat/filelock.json#readme",
   "license": "MIT",
   "dependencies": {
-    "hasher-apis": "^0.0.1"
+    "root-dirs": "^0.0.2"
+  },
+  "devDependencies": {
+    "concurrency.js": "^0.0.1",
+    "fssys": "^1.0.1",
+    "get-imported": "^0.0.5",
+    "git-apis": "^0.0.2",
+    "hasher-apis": "^0.0.1",
+    "mercurial-apis": "^0.0.1",
+    "svn-apis": "^0.0.1"
   }
 }
