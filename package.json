@@ -1,6 +1,6 @@
 {
   "name": "filelock.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "APIs and Functions to work with filelock.json for npm package : require-urls",
   "main": "index.js",
   "exports": {
