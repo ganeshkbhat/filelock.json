@@ -19,5 +19,8 @@
     "url": "https://github.com/ganeshkbhat/filelock.json/issues"
   },
   "homepage": "https://github.com/ganeshkbhat/filelock.json#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "hasher-apis": "^0.0.1"
+  }
 }
