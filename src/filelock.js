@@ -107,6 +107,29 @@ function _readFileLock(filelockPath, options) {
     return require(path.join(filelockPath, "filelock.json"));
 }
 
+
+/**
+ *
+ *
+ * @param {*} localPath
+ * @param {*} data
+ * @return {*} 
+ */
+ async function _writeFileLockEntry(filelockOptions, fileoptions, options) {
+    
+}
+
+/**
+ *
+ *
+ * @param {*} localPath
+ * @param {*} data
+ * @return {*} 
+ */
+ async function _readFileLockEntry(filelockOptions, fileoptions, options) {
+    
+}
+
 /**
  *
  *
@@ -175,7 +198,7 @@ async function _writeFileLock(localPath, data, options) {
  * @param {*} remotePath
  * @param {*} options
  */
-function _verifyFilelockFile(remotePath, options) { }
+function _verifyFilelockFileEntry(remotePath, options) { }
 
 /**
  *
@@ -186,16 +209,18 @@ function _verifyFilelockFile(remotePath, options) { }
 function _verifyFilelock(remotePath, options) { }
 
 
+// filelock.json
 module.exports._writeFileLock = _writeFileLock;
 module.exports._createSHAHash = _createSHAHash;
 module.exports._readFileLock = _readFileLock;
 module.exports._createFileLock = _createFileLock;
 module.exports._updateFileLockEntry = _updateFileLockEntry;
 module.exports._deleteFileLockEntry = _deleteFileLockEntry;
+module.exports._verifyFilelockFileEntry = _verifyFilelockFileEntry;
+module.exports._verifyFilelock = _verifyFilelock;
+
+// hasher-apis
 module.exports._fileContentHash = _fileContentHash;
 module.exports._fileContentDeHash = _fileContentDeHash;
-module.exports._verifyFilelockFile = _verifyFilelockFile;
-module.exports._verifyFilelock = _verifyFilelock;
 module.exports._verifySHAHash = _verifySHAHash;
 module.exports._verifyFileContentHash = _verifyFileContentHash;
-
