@@ -17,8 +17,9 @@
 
 import {
     _writeFileLock, _createSHAHash, _readFileLock,
-    _createFileLock, _updateFileLockEntry, _deleteFileLockEntry,
-    _fileContentHash, _fileContentDeHash,
+    _createFileLock, _fileContentHash, _fileContentDeHash,
+    _writeFileLockEntry, _readFileLockEntry,
+    _updateFileLockEntry, _deleteFileLockEntry,
     _verifyFilelockFileEntry, _verifyFilelock,
     _verifySHAHash, _verifyFileContentHash
 } from "./src/filelock.js";
@@ -27,8 +28,9 @@ export default _writeFileLock;
 
 export {
     _writeFileLock, _createSHAHash, _readFileLock,
-    _createFileLock, _updateFileLockEntry, _deleteFileLockEntry,
-    _fileContentHash, _fileContentDeHash,
+    _createFileLock, _fileContentHash, _fileContentDeHash,
+    _writeFileLockEntry, _readFileLockEntry,
+    _updateFileLockEntry, _deleteFileLockEntry,
     _verifyFilelockFileEntry, _verifyFilelock,
     _verifySHAHash, _verifyFileContentHash
 }

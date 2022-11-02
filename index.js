@@ -18,8 +18,9 @@
 
 const {
     _writeFileLock, _createSHAHash, _readFileLock,
-    _createFileLock, _updateFileLockEntry, _deleteFileLockEntry,
-    _fileContentHash, _fileContentDeHash,
+    _createFileLock, _fileContentHash, _fileContentDeHash,
+    _writeFileLockEntry, _readFileLockEntry,
+    _updateFileLockEntry, _deleteFileLockEntry,
     _verifyFilelockFileEntry, _verifyFilelock,
     _verifySHAHash, _verifyFileContentHash
 } = require("./src/filelock.js");
@@ -30,6 +31,8 @@ module.exports._writeFileLock = _writeFileLock;
 module.exports._createSHAHash = _createSHAHash;
 module.exports._readFileLock = _readFileLock;
 module.exports._createFileLock = _createFileLock;
+module.exports._writeFileLockEntry = _writeFileLockEntry;
+module.exports._readFileLockEntry = _readFileLockEntry;
 module.exports._updateFileLockEntry = _updateFileLockEntry;
 module.exports._deleteFileLockEntry = _deleteFileLockEntry;
 module.exports._verifyFilelockFileEntry = _verifyFilelockFileEntry;
