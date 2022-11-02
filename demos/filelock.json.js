@@ -6,7 +6,7 @@
  * Install: npm i filelock.json --save
  * Github: https://github.com/ganeshkbhat/filelock.json
  * npmjs Link: https://www.npmjs.com/package/filelock.json
- * File: index.js
+ * File: demos/filelock.json
  * 
  * 
 */
