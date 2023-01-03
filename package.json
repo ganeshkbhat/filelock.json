@@ -20,15 +20,19 @@
   },
   "homepage": "https://github.com/ganeshkbhat/filelock.json#readme",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "fssys": "^1.0.2",
+    "get-imported": "^0.0.7",
+    "hasher-apis": "^0.2.1",
+    "lodash": "^4.17.21",
+    "root-dirs": "^0.0.3"
+  },
   "devDependencies": {
-    "root-dirs": "0.0.2",
-    "concurrency.js": "0.0.23-beta",
-    "fssys": "1.0.1",
-    "get-imported": "0.0.51",
-    "git-apis": "0.0.24-beta",
-    "hasher-apis": "0.0.11-beta",
-    "mercurial-apis": "0.0.11-beta",
-    "svn-apis": "0.0.12-beta"
+    "@types/node": "^18.11.18",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "safe-regex": "^2.1.1",
+    "sinon": "^15.0.1",
+    "unimported": "^1.24.0"
   }
 }
