@@ -38,7 +38,7 @@ async function _createFileLock(filelockOptions, fileoptions, options) {
     try {
         readFilelock = _readFileLock(filelockOptions.localPath, options);
     } catch (e) {
-        options.logger("[require-urls]: filelock.js._createFileLockJson: readFilelock assignation - filelockOptions: ");
+        (!!options && !!options.logger) ? options.logger("[require-urls]: filelock.js._createFileLockJson: readFilelock assignation - filelockOptions: ") : null;
     }
 
     if (Object.keys(readFilelock).length === 0) {
@@ -68,7 +68,7 @@ async function _createFileLock(filelockOptions, fileoptions, options) {
         }
     }
 
-    options.logger("[require-urls]: filelock.js._createFileLockJson: readFilelock ", readFilelock);
+    (!!options && !!options.logger) ? options.logger("[require-urls]: filelock.js._createFileLockJson: readFilelock ", readFilelock) : null;
     let files = (!!readFilelock.files) ? { ...readFilelock.files } : {};
 
     /**
@@ -85,12 +85,12 @@ async function _createFileLock(filelockOptions, fileoptions, options) {
         readFilelock["files"] = { ...readFilelock.files, [filename]: { ...fileoptions } };
     }
 
-    options.logger("[require-urls]: filelock.js: filelock data to be written - ", readFilelock);
+    (!!options && !!options.logger) ? options.logger("[require-urls]: filelock.js: filelock data to be written - ", readFilelock) : null;
 
     try {
         await _createFolders(filelockOptions.localPath, options);
     } catch (e) {
-        options.logger("[require-urls]: filelocks.js: _writeFileLock: Folder present");
+        (!!options && !!options.logger) ? options.logger("[require-urls]: filelocks.js: _writeFileLock: Folder present") : null;
     }
 
     return await _writeFileLock(filelockOptions.localPath, readFilelock, options);
@@ -103,7 +103,7 @@ async function _createFileLock(filelockOptions, fileoptions, options) {
  * @return {*} 
  */
 function _readFileLock(filelockPath, options) {
-    options.logger("[require-urls]: filelock.js._readFileLockJson: filelockPath: ", filelockPath);
+    (!!options && !!options.logger) ? options.logger("[require-urls]: filelock.js._readFileLockJson: filelockPath: ", filelockPath) : null;
     return require(path.join(filelockPath, "filelock.json"));
 }
 
@@ -142,7 +142,7 @@ async function _updateFileLockEntry(filelockOptions, fileoptions, options) {
     try {
         readFilelock = _readFileLock(filelockOptions.localPath, options);
     } catch (e) {
-        options.logger("[require-urls]: filelock.js: : filelock.json not created: ", e.message.toString());
+        (!!options && !!options.logger) ? options.logger("[require-urls]: filelock.js: : filelock.json not created: ", e.message.toString()) : null;
         return await _createFileLock(filelockOptions, fileoptions, options);
     }
 
@@ -176,7 +176,7 @@ async function _updateFileLockEntry(filelockOptions, fileoptions, options) {
  */
 async function _deleteFileLockEntry(filelockOptions, fileoptions, options) {
     var readFilelock = _readFileLock(filelockOptions.localPath, options);
-    options.logger("[require-urls]: filelock.js._readFileLockJson: deleting fileoptions.name: ", fileoptions.name);
+    (!!options && !!options.logger) ? options.logger("[require-urls]: filelock.js._readFileLockJson: deleting fileoptions.name: ", fileoptions.name) : null;
     delete readFilelock.files[fileoptions.name];
     return await _writeFileLock(filelockOptions.localPath, readFilelock, options);
 }

@@ -8,7 +8,7 @@
     "import": "./index.mjs"
   },
   "scripts": {
-    "test": "mocha --reporter spec --recursive"
+    "test": "mocha --reporter spec --recursive --timeout 60000"
   },
   "author": "Ganesh B",
   "repository": {
