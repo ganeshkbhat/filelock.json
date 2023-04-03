@@ -115,8 +115,8 @@ function _readFileLock(filelockPath, options) {
  * @param {*} data
  * @return {*} 
  */
- async function _writeFileLockEntry(filelockOptions, fileoptions, options) {
-    
+async function _writeFileLockEntry(filelockOptions, fileoptions, options) {
+
 }
 
 /**
@@ -126,8 +126,8 @@ function _readFileLock(filelockPath, options) {
  * @param {*} data
  * @return {*} 
  */
- async function _readFileLockEntry(filelockOptions, fileoptions, options) {
-    
+async function _readFileLockEntry(filelockOptions, fileoptions, options) {
+
 }
 
 /**
